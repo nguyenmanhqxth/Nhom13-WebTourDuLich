@@ -346,34 +346,6 @@ img {
     margin-bottom: 10px;
 }
 
-/* Footer */
-.footer {
-    background-color: #333;
-    color: #fff;
-    padding: 50px 0 20px;
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 30px;
-    margin-bottom: 30px;
-}
-
-.footer-col h3 {
-    margin-bottom: 20px;
-    font-size: 18px;
-}
-
-.footer-col p {
-    margin-bottom: 10px;
-}
-
-.footer-col i {
-    margin-right: 10px;
-    color: #3498db;
-}
-
 .social-links {
     display: flex;
     gap: 15px;
@@ -594,4 +566,258 @@ img {
 .explore-btn:hover {
     background-color: #2980b9;
 }
-
+h2 {
+    margin-bottom: 50px;
+    font-size: 28px;
+    margin-top: 20px;
+  }
+  .heading-underline {
+    position: relative;
+    display: inline-block;
+    font-size: 28px; /* tuỳ chỉnh theo thiết kế */
+    font-weight: bold;
+    display: flex;
+    justify-content: center;  /* Canh giữa theo chiều ngang */
+    align-items: center;  
+  }
+  
+  .heading-underline::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px; /* khoảng cách giữa chữ và gạch */
+    transform: translateX(-50%);
+    width: 5%; /* độ dài của gạch */
+    height: 3px; /* độ dày gạch */
+    background-color: #2196F3; /* màu xanh giống trong hình */
+    border-radius: 2px; /* bo góc gạch */
+  }
+  .experience-section {
+    display: flex;
+    margin-bottom: 40px;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  
+  .card {
+    position: relative;
+    width: 350px;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+    color: white;
+    /* chữ trắng */
+  }
+  
+  .card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+  
+  .card .text {
+    position: relative;
+    z-index: 2;
+    /* nằm trên overlay */
+    padding: 20px;
+    width: 80%;
+    bottom: 0;
+    color: white;
+    /* đảm bảo chữ trắng */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    /* bóng chữ giúp dễ đọc */
+  }
+  
+  .card .text h3,
+  .card .text p {
+    margin: 0;
+  }
+  
+  .card button {
+    margin-top: 10px;
+    background: white;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 90px;
+    cursor: pointer;
+  }
+  
+  .destination-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  
+  .dest-card {
+    width: 150px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  .destination-section :hover {
+    transform: scale(1.05);
+  }
+  
+  .load-more {
+    margin-top: 40px;
+    text-align: center;
+  }
+  
+  .load-more button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background: #eee;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  
+  .promo-section {
+    background-image: url('./assets/image/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px;
+    color: white;
+    position: relative;
+    border-radius: 8px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  
+  .promo-overlay {
+    max-width: 600px;
+    margin: auto;
+    background-color: rgba(75, 75, 75, 0.5);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .email-form {
+    margin-top: 20px;
+  }
+  
+  .email-form input {
+    padding: 10px;
+    width: 60%;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+  
+  .email-form button {
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Feature section */
+  .features {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .feature-box {
+    width: 30%;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    border: #969191 1px solid;
+    box-shadow: 10px 10px 5px rgb(219, 217, 217);
+  }
+  .features :hover{
+    transform: scale(1.005);
+  }
+  .feature-box img {
+    width: 120px;
+    height: 100px;
+  }
+  
+  .feature-box button {
+    margin-top: 15px;
+    padding: 8px 16px;
+    background-color: rgb(181, 178, 178);
+    color: white;
+    border: 1px solid;
+    border-radius: 5px;
+    color: #000;
+    cursor: pointer;
+  }
+  
+  /* Footer section */
+  footer {
+    background-color: #ffffff;
+    padding: 20px;
+    font-size: 14px;
+    border-radius: 8px;
+  }
+  .partners{
+    border-bottom: 1px solid black;
+  }
+  .partner-logos {
+    display: flex;
+    gap: 40px;
+    margin: 20px 0;
+    justify-content: space-around;
+  }
+  
+  .partner-logos img {
+    height: 60px;
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+  }
+  
+  .footer-links h4 {
+    font-weight: bold;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links li {
+    margin: 6px 0;
+  }
+  
+  .footer-links a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  footer .copyright {
+    text-align: center;
+    margin-top: 20px;
+    color: #888;
+  }
