@@ -88,8 +88,10 @@ img {
   margin-top: 50px;
 }
 .dichuyen h1 {
+  text-align: center;
   padding: 30px;
   font-size: 28px;
+  color: #3498db;
 }
 
 .tour-all {
@@ -136,7 +138,7 @@ img {
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 6px;
-  color: #2c3e50;
+  color: #3498db;
 }
 
 .tour-tags {
