@@ -217,3 +217,31 @@ img {
     margin-top: 20px;
     color: #888;
   }
+
+  /* trang trí bổ sung */
+
+ 
+.tourvatrainghiem h1 {
+  color: #3498db;
+  margin-top: 60px;
+  padding: 30px;
+  text-align: center;
+}
+
+.tour-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #3498db;
+}
+
+
+/* Bỏ viền màu hoặc khung màu xanh nếu có */
+.tour-guarantee {
+  font-size: 12px;
+  color: red;
+  
+  display: inline-block;
+  padding: 2px 6px;
+  margin-top: 6px;
+}
