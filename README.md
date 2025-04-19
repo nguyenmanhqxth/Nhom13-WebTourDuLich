@@ -54,7 +54,7 @@ open index.html
 
 ## 🖼 Demo
 
-👉 [Xem website ViVuGo.com tại đây](https://ten-user.github.io/ten-repo/)
+👉 [Xem website ViVuGo.com tại đây](https://nguyenmanhqxth.github.io/Nhom13-WebTourDuLich/)
 
 ## 🛠 Công Nghệ Sử Dụng
 
