@@ -1,16 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu toggle (nếu cần)
-    const mobileMenuBtn = document.createElement('div');
-    mobileMenuBtn.className = 'mobile-menu-btn';
-    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-    document.querySelector('.header .container').prepend(mobileMenuBtn);
-    
-    const navbar = document.querySelector('.navbar');
-    
-    mobileMenuBtn.addEventListener('click', function() {
-        navbar.classList.toggle('active');
-    });
-    
+
     // Xử lý khi cuộn trang
     window.addEventListener('scroll', function() {
         const header = document.querySelector('.header');
@@ -44,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.transition = 'transform 0.3s ease';
         });
     });
-});
+
 // Xử lý cho phần Why Choose Us
 document.querySelectorAll('.reason-card').forEach(card => {
     card.addEventListener('mouseenter', function() {
