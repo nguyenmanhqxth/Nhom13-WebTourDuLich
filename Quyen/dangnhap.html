@@ -1,199 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>dang nhap</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-    /* Reset cơ bản và font chữ */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif; 
-}
+        /* Reset cơ bản và font chữ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-body, html {
-    height: 100%;
-}
+        body,
+        html {
+            height: 100%;
+        }
 
-.background-container {
-    /* Sử dụng ảnh Vịnh Hạ Long làm nền */
-    background-image: url('image/anh4.jpg'); 
-    background-size: cover;         
-    background-position: center;    
-    background-repeat: no-repeat;   
-    min-height: 100vh;              
-    display: flex;
-    flex-direction: column;         
-    justify-content: center;      
-    align-items: center;          
-    padding: 20px;
-    position: relative; 
-    color: white; 
-}
-
-
-.background-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.4); 
-    z-index: 1; 
-}
+        .background-container {
+            /* Sử dụng ảnh Vịnh Hạ Long làm nền */
+            background-image: url('image/anh4.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            color: white;
+        }
 
 
-h1, .login-box, .footer-text {
-    position: relative;
-    z-index: 2;
-}
+        .background-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
 
 
-h1 {
-    text-transform: uppercase;
-    margin-bottom: 30px;
-    font-size: 2.5em; 
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-/* Hộp đăng nhập */
-.login-box {
-    background-color: rgba(0, 0, 0, 0.5); 
-    padding: 40px 30px;
-    border-radius: 8px;
-    width: 100%;
-    max-width: 480px; 
-    text-align: center;
-}
-
-.login-box h2 {
-    text-transform: uppercase;
-    margin-bottom: 30px;
-    font-size: 1.5em;
-}
+        h1,
+        .login-box,
+        .footer-text {
+            position: relative;
+            z-index: 2;
+        }
 
 
-.input-group {
-    position: relative;
-    margin-bottom: 20px;
-}
+        h1 {
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
 
-.input-group .icon {
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #ccc; 
-}
+        /* Hộp đăng nhập */
+        .login-box {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 40px 30px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 480px;
+            text-align: center;
+        }
 
-.input-group input {
-    width: 100%;
-    padding: 12px 15px 12px 45px; 
-    background-color: transparent;
-    border: 1px solid white;
-    border-radius: 4px;
-    color: white;
-    font-size: 1rem;
-}
-
-.input-group input::placeholder {
-    color: #ccc;
-}
+        .login-box h2 {
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            font-size: 1.5em;
+        }
 
 
-.options-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 25px;
-    font-size: 0.9em;
-}
+        .input-group {
+            position: relative;
+            margin-bottom: 20px;
+        }
 
-.remember-me {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
-.remember-me input[type="checkbox"] {
-    margin-right: 8px;
-    accent-color: #007bff; 
-}
+        .input-group .icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #ccc;
+        }
 
-.forgot-password {
-    color: white;
-    text-decoration: none;
-}
+        .input-group input {
+            width: 100%;
+            padding: 12px 15px 12px 45px;
+            background-color: transparent;
+            border: 1px solid white;
+            border-radius: 4px;
+            color: white;
+            font-size: 1rem;
+        }
 
-.forgot-password:hover {
-    text-decoration: underline;
-}
-.login-button {
-    width: 100%;
-    padding: 12px;
-    background-color: #007bff; 
-    border: none;
-    border-radius: 4px;
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-bottom: 25px;
-}
-
-.login-button:hover {
-    background-color: #0056b3; 
-}
-
-/* Link đăng ký */
-.register-link {
-    font-size: 0.9em;
-}
-
-.register-link a {
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.register-link a:hover {
-    text-decoration: underline;
-}
+        .input-group input::placeholder {
+            color: #ccc;
+        }
 
 
-.footer-text {
-    margin-top: 30px;
-    font-size: 0.8em;
-    color: rgba(255, 255, 255, 0.8);
-}
-/* Responsive cho màn hình nhỏ hơn */
+        .options-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            font-size: 0.9em;
+        }
+
+        .remember-me {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .remember-me input[type="checkbox"] {
+            margin-right: 8px;
+            accent-color: #007bff;
+        }
+
+        .forgot-password {
+            color: white;
+            text-decoration: none;
+        }
+
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+
+        .login-button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-bottom: 25px;
+        }
+
+        .login-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Link đăng ký */
+        .register-link {
+            font-size: 0.9em;
+        }
+
+        .register-link a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .register-link a:hover {
+            text-decoration: underline;
+        }
 
 
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.8em;
-    }
-    .login-box {
-        padding: 30px 20px;
-    }
-    .options-row {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .forgot-password {
-        margin-top: 10px;
-    }
-}
+        .footer-text {
+            margin-top: 30px;
+            font-size: 0.8em;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .quayve {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin: 20px;
+        }
+
+        /* Responsive cho màn hình nhỏ hơn */
+
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .login-box {
+                padding: 30px 20px;
+            }
+
+            .options-row {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .forgot-password {
+                margin-top: 10px;
+            }
+        }
     </style>
 </head>
+
 <body>
     <div class="background-container">
-        <h1>ViVugo xin chào  </h1>
+        <h1>ViVugo xin chào </h1>
         <div class="login-box">
             <h2>LOGIN NOW</h2>
             <form action="#">
@@ -216,7 +236,12 @@ h1 {
                     Don't Have an Account? <a href="#">REGISTER NOW</a>
                 </p>
             </form>
-    </div>
+            <div class="quayve">
+                <a href="/index.html">
+                    <i class="fa-solid fa-house" style="color: #edeff3;"></i>
+                </a>
+            </div>
 </body>
 </body>
+
 </html>
