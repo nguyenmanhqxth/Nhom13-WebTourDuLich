@@ -93,6 +93,7 @@ body {
 .khachsan{
     margin-top: 40px;
     padding: 30px;
+    margin-bottom: 50px;
 }
 
 .khachsan h1 {
@@ -223,3 +224,25 @@ body {
       margin-top: 20px;
       color: #888;
     }
+
+    /* Nút Mua */
+.add-to-cart-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin:20px;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #2980b9;
+}
+
+.add-to-cart-btn:focus {
+  outline: none;
+}

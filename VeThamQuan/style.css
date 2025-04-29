@@ -91,6 +91,7 @@ img {
 .vethamquan{
   margin-top: 80px;
   padding: 30px;
+  margin-bottom: 50px;
 }
 .vethamquan h1 {
   font-size: 28px;
@@ -187,6 +188,7 @@ img {
   margin-bottom: 6px;
   font-weight: 600;
   color: #3498db;
+  height: 48px;
 }
 
 .tour-info p {
@@ -258,3 +260,25 @@ del {
     margin-top: 20px;
     color: #888;
   }
+
+  /* Nút Mua */
+.add-to-cart-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #2980b9;
+}
+
+.add-to-cart-btn:focus {
+  outline: none;
+}

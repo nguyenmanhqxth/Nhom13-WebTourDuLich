@@ -16,10 +16,10 @@ document.addEventListener('DOMContentLoaded', function () {
          
             const existingProductIndex = cart.findIndex(item => item.name === productName);
             if (existingProductIndex >= 0) {
-                
+              
                 cart[existingProductIndex].quantity += 1;
             } else {
-          
+             
                 cart.push({
                     name: productName,
                     price: productPrice,
@@ -37,3 +37,5 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+console.log("Image path:", productImage);
