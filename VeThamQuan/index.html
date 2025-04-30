@@ -1,253 +1,268 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vé Tham Quan</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- <link rel="stylesheet" href="../assets-Manh/font/fontawesome-free-6.7.2/css/all.min.css"> -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="../responsive.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vé Tham Quan</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header -->
-    <header class="header">
-      <div class="container">
-          <div class="logo">
-              <h1>ViVuGo.com</h1>
-          </div>
-          <nav class="navbar">
-              <ul>
-                  <li><a href="../index.html">Trang chủ</a></li>
-                  <li><a href="../TourVaTN/index.html">Tour & Trải nghiệm</a></li>
-                  <li><a href="VeThamQuan/index.html" class="active">Vé tham quan</a></li>
-                  <li><a href="../KhachSan/index.html">Khách sạn</a></li>
-                  <li><a href="../DICHUYEN/thu.html">Di chuyển</a></li>
-              </ul>
-          </nav>
-          <div class="user-actions">
-              <a href="#" class="search-btn"><i class="fas fa-search"></i></a>
-              <a href="../Quyen/dangki.html" class="user-btn"><i class="fas fa-user"></i></a>
-              <a href="../Quyen/giohang.html" class="cart-btn"><i class="fas fa-shopping-cart"></i></a>
-          </div>
+<!-- Header -->
+<header class="header">
+  <div class="container">
+    <div class="logo">
+      <h1>ViVuGo.com</h1>
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="../index.html">Trang chủ</a></li>
+        <li><a href="../TourVaTN/index.html">Tour & Trải nghiệm</a></li>
+        <li><a href="VeThamQuan/index.html" class="active">Vé tham quan</a></li>
+        <li><a href="../KhachSan/index.html">Khách sạn</a></li>
+        <li><a href="../DICHUYEN/thu.html">Di chuyển</a></li>
+      </ul>
+    </nav>
+    <div class="user-actions">
+      <a href="#" class="search-btn"><i class="fas fa-search"></i></a>
+      <a href="../Quyen/dangki.html" class="user-btn"><i class="fas fa-user"></i></a>
+      <a href="../Quyen/giohang.html" class="cart-btn"><i class="fas fa-shopping-cart"></i></a>
+    </div>
+  </div>
+</header>
+
+<!-- Nội dung -->
+<div class="vethamquan">
+  <h1>Vé Tham Quan</h1>
+
+  <!-- Video Việt Nam -->
+  <div class="viet-nam-card">
+    <video autoplay muted loop class="bg-video">
+      <source src="../Video/donglua.mp4" type="video/mp4">
+      Trình duyệt của bạn không hỗ trợ video nền.
+    </video>
+    <div class="tour-info overlay-text">
+      <h3 style="color: white;">VIỆT NAM</h3>
+      <p style="color: white;">Khám phá <i class="fas fa-chevron-right"></i></p>
+    </div>
+  </div>
+
+  <!-- Phần Vé -->
+  <div class="ve-muc">
+    
+    <!-- Mục 1: Vé Cáp Treo -->
+    <h2 class="ve-title">🎡 Vé Cáp Treo</h2>
+    <div class="ve-grid">
+      
+      <div class="tour-card">
+        <img src="../Image/VéThamQuan/captreo.png" alt="Ba Na Hills">
+        <div class="tour-info">
+          <h3>Vé Cáp Treo Sun World Ba Na Hills Đà Nẵng</h3>
+          <p><a><i class="fa-solid fa-star" style="color: #FFD700;"></i></a>
+             4.7 (23K+)</p>
+          <p><strong>₫840,000</strong> <del>₫850,000</del></p>
+          <button 
+              class="add-to-cart-btn" 
+              data-name="Vé Cáp Treo Sun World Ba Na Hills Đà Nẵng" 
+              data-price="840000"
+              data-image="../Image/VéThamQuan/captreo.png"
+              data-date="20/06/2025"
+              data-description="Cáp treo Bà Nà Hills - ngắm Cầu Vàng và làng Pháp"
+            >Mua</button>
+        </div>
       </div>
-    </header>
 
+      <div class="tour-card">
+        <img src="../Image/VéThamQuan/captreo-fansipan.png" alt="Fansipan Legend">
+        <div class="tour-info">
+          <h3>Vé Cáp Treo Sun World Fansipan Legend</h3>
+          <p><a><i class="fa-solid fa-star" style="color: #FFD700;"></i></a>
+             4.8 (4,813)</p>
+          <p><strong>₫800,000</strong></p>
+          <button 
+              class="add-to-cart-btn" 
+              data-name="Vé Cáp Treo Sun World Fansipan Legend" 
+              data-price="800000"
+              data-image="../Image/VéThamQuan/captreo-fansipan.png"
+              data-date="22/06/2025"
+              data-description="Trải nghiệm đỉnh Fansipan bằng cáp treo hiện đại"
+            >Mua</button>
+        </div>
+      </div>
 
-
-    <div class="vethamquan">
-        <h1>Vé Tham Quan</h1>
-        <div class="ve-layout">
-      
-            <!-- Cột trái: Khám phá Việt Nam -->
-            <div class="viet-nam-card">
-                <video autoplay muted loop class="bg-video">
-                  <source src="../Video/donglua.mp4" type="video/mp4">
-                  Trình duyệt của bạn không hỗ trợ video nền.
-                </video>
-                <div class="tour-info overlay-text">
-                  <h3 style="color: white;">VIỆT NAM</h3>
-                  <p style="color: white;">Khám phá <i class="fas fa-chevron-right"></i></p>
-                </div>
-              </div>
-              
-      
-            <!-- Cột phải: các vé tham quan -->
-            <div class="ve-grid">
-             
-              <div class="tour-card">
-                <img src="../Image/VéThamQuan/captreo.png" alt="Ba Na Hills">
-                <div class="tour-info">
-                  <h3>Vé Cáp Treo Sun World Ba Na Hills Đà Nẵng</h3>
-                  <p><a><i class="fa-solid fa-star" style="color: #FFD700;"></i></a>
-                     4.7 (23K+)</p>
-                  <p><strong>₫840,000</strong> <del>₫850,000</del></p>
-                  <button 
-                      class="add-to-cart-btn" 
-                      data-name="Vé Cáp Treo Sun World Ba Na Hills Đà Nẵng" 
-                      data-price="840000"
-                      data-image="../Image/VéThamQuan/captreo.png"
-                      data-date="20/06/2025"
-                      data-description="Cáp treo Bà Nà Hills - ngắm Cầu Vàng và làng Pháp"
-                    >Mua</button>
-                </div>
-              </div>
-
-              <div class="tour-card">
-                <img src="../Image/VéThamQuan/captreo-fansipan.png" alt="Fansipan Legend">
-                <div class="tour-info">
-                  <h3>Vé Cáp Treo Sun World Fansipan Legend</h3>
-                  <p><a><i class="fa-solid fa-star" style="color: #FFD700;"></i></a>
-                     4.8 (4,813)</p>
-                  <p><strong>₫800,000</strong></p>
-                  <button 
-                      class="add-to-cart-btn" 
-                      data-name="Vé Cáp Treo Sun World Fansipan Legend" 
-                      data-price="800000"
-                      data-image="../Image/VéThamQuan/captreo-fansipan.png"
-                      data-date="22/06/2025"
-                      data-description="Trải nghiệm đỉnh Fansipan bằng cáp treo hiện đại"
-                    >Mua</button>
-                </div>
-              </div>
-          
-              <div class="tour-card">
-                <img src="../Image/VéThamQuan/vinwonder.png" alt="VinWonders Nha Trang">
-                <div class="tour-info">
-                  <h3>Vé VinWonders Nha Trang</h3>
-                  <p><a><i class="fa-solid fa-star" style="color: #FFD700;"></i></a> 4.6 (5,006)</p>
-                  <p><strong>₫660,000</strong></p>
-                  <button 
-                      class="add-to-cart-btn" 
-                      data-name="Vé VinWonders Nha Trang" 
-                      data-price="660000"
-                      data-image="../Image/VéThamQuan/vinwonder.png"
-                      data-date="23/06/2025"
-                      data-description="Thế giới giải trí biển đảo hàng đầu Việt Nam"
-                    >Mua</button>
-                </div>
-              </div>
-          
-              <div class="tour-card">
-                <img src="../Image/VéThamQuan/sunworld.png" alt="Sun World Hòn Thơm">
-                <div class="tour-info">
-                  <h3>Vé Sun World Hòn Thơm</h3>
-                  <p><a><i class="fa-solid fa-star" style="color: #FFD700;"></i></a> 4.7 (2,629)</p>
-                  <p><strong>₫639,852</strong> <del>₫650,000</del></p>
-                  <button 
-                      class="add-to-cart-btn" 
-                      data-name="Vé Sun World Hòn Thơm" 
-                      data-price="639852"
-                      data-image="../Image/VéThamQuan/sunworld.png"
-                      data-date="24/06/2025"
-                      data-description="Cáp treo vượt biển dài nhất thế giới"
-                    >Mua</button>
-                </div>
-              </div>
-          
-              <div class="tour-card">
-                <img src="../Image/VéThamQuan/hoian.png" alt="Hội An Memories Show">
-                <div class="tour-info">
-                  <h3>Vé Hội An Memories Show</h3>
-                  <p><a><i class="fa-solid fa-star" style="color: #FFD700;"></i></a> 4.9 (3,112)</p>
-                  <p><strong>₫700,000</strong></p>
-                  <button 
-                      class="add-to-cart-btn" 
-                      data-name="Vé Hội An Memories Show" 
-                      data-price="700000"
-                      data-image="../Image/VéThamQuan/hoian.png"
-                      data-date="25/06/2025"
-                      data-description="Show diễn thực cảnh lớn nhất Việt Nam tại Hội An"
-                    >Mua</button>
-                </div>
-              </div>
-          
-              <div class="tour-card">
-                <img src="../Image/VéThamQuan/xebuyt.jpg" alt="Đà Lạt City Tour">
-                <div class="tour-info">
-                  <h3>Vé Xe Buýt Đà Lạt City Tour</h3>
-                  <p><a><i class="fa-solid fa-star" style="color: #FFD700;"></i></a> 4.6 (1,325)</p>
-                  <p><strong>₫300,000</strong></p>
-                  <button 
-                      class="add-to-cart-btn" 
-                      data-name="Vé Xe Buýt Đà Lạt City Tour" 
-                      data-price="300000"
-                      data-image="../Image/VéThamQuan/xebuyt.jpg"
-                      data-date="26/06/2025"
-                      data-description="Khám phá thành phố Đà Lạt bằng xe buýt 2 tầng"
-                    >Mua</button>
-                </div>
-              </div>
-          
-              <div class="tour-card">
-                <img src="../Image/VéThamQuan/ve-sunworld-ba-na-hills.jpg" alt="Sun World Bà Nà">
-                <div class="tour-info">
-                  <h3>Vé Công Viên Sun World Bà Nà</h3>
-                  <p><a><i class="fa-solid fa-star" style="color: #FFD700;"></i></a> 4.7 (8,762)</p>
-                  <p><strong>₫650,000</strong></p>
-                  <button 
-                      class="add-to-cart-btn" 
-                      data-name="Vé Công Viên Sun World Bà Nà" 
-                      data-price="650000"
-                      data-image="../Image/VéThamQuan/ve-sunworld-ba-na-hills.jpg"
-                      data-date="27/06/2025"
-                      data-description="Tham quan công viên giải trí nổi tiếng ở Bà Nà Hills"
-                    >Mua</button>
-                </div>
-              </div>
-      
-            <div class="tour-card">
-                <img src="../Image/VéThamQuan/huetourism.jpg.crdownload" alt="Huế City Tour">
-                <div class="tour-info">
-                <h3>Vé Tham Quan Thành Phố Huế</h3>
-                <p><a><i class="fa-solid fa-star" style="color: #FFD700;"></i></a> 4.8 (2,345)</p>
-                <p><strong>₫450,000</strong></p>
-                <button 
-                    class="add-to-cart-btn" 
-                    data-name="Vé Tham Quan Thành Phố Huế" 
-                    data-price="450000"
-                    data-image="../Image/VéThamQuan/huetourism.jpg.crdownload"
-                    data-date="28/06/2025"
-                    data-description="Khám phá di tích lịch sử và văn hóa cố đô Huế"
-                  >Mua</button>
-                </div>
-            </div>
-            
-            </div>
-          </div>
 
     </div>
 
+    <!-- Mục 2: Vé Công Viên -->
+    <h2 class="ve-title">🏰 Vé Công Viên Giải Trí</h2>
+    <div class="ve-grid">
 
-    <!-- PHẦN 2: Footer -->
-    <footer>
-      <div class="partners">
-          <h3>ĐỐI TÁC</h3>
-          <div class="partner-logos">
-              <img src="../assets/image/shangrila.png" alt="Shangri-La">
-              <img src="../assets/image/asiamiles.png" alt="Asia Miles">
-              <img src="../assets/image/getgo.png" alt="Getgo">
-              <img src="../assets/image/google.png" alt="Reserve with Google">
-              <img src="../assets/image/iventure.jpg" alt="iVenture Card">
-          </div>
+      <div class="tour-card">
+        <img src="../Image/VéThamQuan/vinwonder.png" alt="VinWonders Nha Trang">
+        <div class="tour-info">
+          <h3>Vé VinWonders Nha Trang</h3>
+          <p><a><i class="fa-solid fa-star" style="color: #FFD700;"></i></a> 4.6 (5,006)</p>
+          <p><strong>₫660,000</strong></p>
+          <button 
+              class="add-to-cart-btn" 
+              data-name="Vé VinWonders Nha Trang" 
+              data-price="660000"
+              data-image="../Image/VéThamQuan/vinwonder.png"
+              data-date="23/06/2025"
+              data-description="Thế giới giải trí biển đảo hàng đầu Việt Nam"
+            >Mua</button>
+        </div>
       </div>
-  
-      <div class="footer-links">
-          <div>
-              <h4>VỀ VIVUGO</h4>
-              <ul>
-                  <li><a href="#">Về chúng tôi</a></li>
-                  <li><a href="#">Cơ hội nghề nghiệp</a></li>
-                  <li><a href="#">Phiếu quà tặng Vivugo</a></li>
-              </ul>
-          </div>
-          <div>
-              <h4>ĐỐI TÁC</h4>
-              <ul>
-                  <li><a href="#">Đăng ký nhà cung cấp</a></li>
-                  <li><a href="#">Đối tác đăng nhập</a></li>
-                  <li><a href="#">Đối tác liên kết</a></li>
-                  <li><a href="#">Chương trình cho người nổi tiếng</a></li>
-              </ul>
-          </div>
-          <div>
-              <h4>ĐIỀU KHOẢN SỬ DỤNG</h4>
-              <ul>
-                  <li><a href="#">Điều khoản sử dụng</a></li>
-                  <li><a href="#">Chính sách bảo mật</a></li>
-                  <li><a href="#">Chính sách Cookie</a></li>
-              </ul>
-          </div>
-      </div>
-  
-      <div class="copyright">
-          <p>@2023-2027 (K18) Vivugo. TTCSN-NHÓM 13</p>
-      </div>
-  </footer>
 
+      <div class="tour-card">
+        <img src="../Image/VéThamQuan/ve-sunworld-ba-na-hills.jpg" alt="Sun World Bà Nà">
+        <div class="tour-info">
+          <h3>Vé Công Viên Sun World Bà Nà</h3>
+          <p><a><i class="fa-solid fa-star" style="color: #FFD700;"></i></a> 4.7 (8,762)</p>
+          <p><strong>₫650,000</strong></p>
+          <button 
+              class="add-to-cart-btn" 
+              data-name="Vé Công Viên Sun World Bà Nà" 
+              data-price="650000"
+              data-image="../Image/VéThamQuan/ve-sunworld-ba-na-hills.jpg"
+              data-date="27/06/2025"
+              data-description="Tham quan công viên giải trí nổi tiếng ở Bà Nà Hills"
+            >Mua</button>
+        </div>
+      </div>
 
-  <script src="script.js"></script>
-  <script src="../index.js"></script>
+      <div class="tour-card">
+        <img src="../Image/VéThamQuan/sunworld.png" alt="Sun World Hòn Thơm">
+        <div class="tour-info">
+          <h3>Vé Sun World Hòn Thơm</h3>
+          <p><a><i class="fa-solid fa-star" style="color: #FFD700;"></i></a> 4.7 (2,629)</p>
+          <p><strong>₫639,852</strong> <del>₫650,000</del></p>
+          <button 
+              class="add-to-cart-btn" 
+              data-name="Vé Sun World Hòn Thơm" 
+              data-price="639852"
+              data-image="../Image/VéThamQuan/sunworld.png"
+              data-date="24/06/2025"
+              data-description="Cáp treo vượt biển dài nhất thế giới"
+            >Mua</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Mục 3: Vé Show Biểu Diễn -->
+    <h2 class="ve-title">🎭 Vé Show Biểu Diễn</h2>
+    <div class="ve-grid">
+
+      <div class="tour-card">
+        <img src="../Image/VéThamQuan/hoian.png" alt="Hội An Memories Show">
+        <div class="tour-info">
+          <h3>Vé Hội An Memories Show</h3>
+          <p><a><i class="fa-solid fa-star" style="color: #FFD700;"></i></a> 4.9 (3,112)</p>
+          <p><strong>₫700,000</strong></p>
+          <button 
+              class="add-to-cart-btn" 
+              data-name="Vé Hội An Memories Show" 
+              data-price="700000"
+              data-image="../Image/VéThamQuan/hoian.png"
+              data-date="25/06/2025"
+              data-description="Show diễn thực cảnh lớn nhất Việt Nam tại Hội An"
+            >Mua</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Mục 4: Vé City Tour -->
+    <h2 class="ve-title">🚌 Vé City Tour</h2>
+    <div class="ve-grid">
+
+      <div class="tour-card">
+        <img src="../Image/VéThamQuan/xebuyt.jpg" alt="Đà Lạt City Tour">
+        <div class="tour-info">
+          <h3>Vé Xe Buýt Đà Lạt City Tour</h3>
+          <p><a><i class="fa-solid fa-star" style="color: #FFD700;"></i></a> 4.6 (1,325)</p>
+          <p><strong>₫300,000</strong></p>
+          <button 
+              class="add-to-cart-btn" 
+              data-name="Vé Xe Buýt Đà Lạt City Tour" 
+              data-price="300000"
+              data-image="../Image/VéThamQuan/xebuyt.jpg"
+              data-date="26/06/2025"
+              data-description="Khám phá thành phố Đà Lạt bằng xe buýt 2 tầng"
+            >Mua</button>
+        </div>
+      </div>
+
+      <div class="tour-card">
+        <img src="../Image/VéThamQuan/huetourism.jpg.crdownload" alt="Huế City Tour">
+        <div class="tour-info">
+        <h3>Vé Tham Quan Thành Phố Huế</h3>
+        <p><a><i class="fa-solid fa-star" style="color: #FFD700;"></i></a> 4.8 (2,345)</p>
+        <p><strong>₫450,000</strong></p>
+        <button 
+            class="add-to-cart-btn" 
+            data-name="Vé Tham Quan Thành Phố Huế" 
+            data-price="450000"
+            data-image="../Image/VéThamQuan/huetourism.jpg.crdownload"
+            data-date="28/06/2025"
+            data-description="Khám phá di tích lịch sử và văn hóa cố đô Huế"
+          >Mua</button>
+        </div>
+    </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="partners">
+    <h3>ĐỐI TÁC</h3>
+    <div class="partner-logos">
+      <img src="../assets/image/shangrila.png" alt="Shangri-La">
+      <img src="../assets/image/asiamiles.png" alt="Asia Miles">
+      <img src="../assets/image/getgo.png" alt="Getgo">
+      <img src="../assets/image/google.png" alt="Reserve with Google">
+      <img src="../assets/image/iventure.jpg" alt="iVenture Card">
+    </div>
+  </div>
+
+  <div class="footer-links">
+    <div>
+      <h4>VỀ VIVUGO</h4>
+      <ul>
+        <li><a href="#">Về chúng tôi</a></li>
+        <li><a href="#">Cơ hội nghề nghiệp</a></li>
+        <li><a href="#">Phiếu quà tặng Vivugo</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>ĐỐI TÁC</h4>
+      <ul>
+        <li><a href="#">Đăng ký nhà cung cấp</a></li>
+        <li><a href="#">Đối tác đăng nhập</a></li>
+        <li><a href="#">Đối tác liên kết</a></li>
+        <li><a href="#">Chương trình cho người nổi tiếng</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>ĐIỀU KHOẢN SỬ DỤNG</h4>
+      <ul>
+        <li><a href="#">Điều khoản sử dụng</a></li>
+        <li><a href="#">Chính sách bảo mật</a></li>
+        <li><a href="#">Chính sách Cookie</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="copyright">
+    <p>@2023-2027 (K18) Vivugo. TTCSN-NHÓM 13</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>
