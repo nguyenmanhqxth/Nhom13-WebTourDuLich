@@ -1,286 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khách Sạn</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="../responsive.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khách Sạn</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
 </head>
+
 <body>
+  <!-- /*banner đầu trang-----------------------------------*/ -->
+  <div class="banner">
+    <img src="/assets/image/ks_banner.jpg" alt="Banner" class="banner-image">
+  </div>
 
-        <!-- Header -->
-        <header class="header">
-            <div class="container">
-                <div class="logo">
-                    <h1>ViVuGo.com</h1>
-                </div>
-                <nav class="navbar">
-                    <ul>
-                        <li><a href="../index.html">Trang chủ</a></li>
-                        <li><a href="../TourVaTN/index.html">Tour & Trải nghiệm</a></li>
-                        <li><a href="../VeThamQuan/index.html">Vé tham quan</a></li>
-                        <li><a href="KhachSan/index.html" class="active">Khách sạn</a></li>
-                        <li><a href="../DICHUYEN/thu.html">Di chuyển</a></li>
-                    </ul>
-                </nav>
-                <div class="user-actions">
-                    <a href="#" class="search-btn"><i class="fas fa-search"></i></a>
-                    <a href="../Quyen/dangki.html" class="user-btn"><i class="fas fa-user"></i></a>
-                    <a href="../Quyen/giohang.html" class="cart-btn"><i class="fas fa-shopping-cart"></i></a>
-                </div>
-            </div>
-        </header>
+  <div class="search-container">
+    <div class="h1">
+      <h1>Khách sạn tiết kiệm</h1>
+    </div>
+    <div class="text">
+      <span>
+        <h4>Khách sạn 3 sao trở lên, vị trí thuận lợi, giá chỉ từ 300k</h4>
+        <p>Địa điểm: Khách sạn trong nước giá rẻ</p>
+      </span>
+      <div class="search-bar">
+        <input type="text" placeholder="Điểm đến, khách sạn, tên khu vực...">
+        <button>Tìm kiếm</button>
+      </div>
+      <div class="guest-info">
+        <label for="guests">Chọn người lớn:</label>
+        <select id="guests">
+          <option value="1">1 người</option>
+          <option value="2">2 người</option>
+          <option value="3">3 người</option>
+          <option value="4">4 người</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <!-- deal -->
+  <div class="deals-container">
+    <div class="deal">
+      <h3 class="deal-title">Nhận mã <span>DEAL123</span></h3>
+      <p class="deal-description">Giảm 6% đặt phòng khách sạn năm 2023. Giới hạn 1 mã cho khách hàng.</p>
+      <a href="#" class="deal-link">Khám Phá Ngay</a>
+    </div>
+    <div class="deal">
+      <h3 class="deal-title">Nhận mã <span>CODE123</span></h3>
+      <p class="deal-description">Giảm 8% đặt phòng khách sạn toàn quốc Tế.</p>
+      <a href="#" class="deal-link">Khám Phá Ngay</a>
+    </div>
+  </div>
 
-    <!-- content -->
-    <div class="khachsan">
-        <h1>Khách Sạn</h1>
-        <div class="hotel-grid">
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <h1>ViVuGo.com</h1>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="../index.html">Trang chủ</a></li>
+          <li><a href="../TourVaTN/index.html">Tour & Trải nghiệm</a></li>
+          <li><a href="../VeThamQuan/index.html">Vé tham quan</a></li>
+          <li><a href="KhachSan/index.html" class="active">Khách sạn</a></li>
+          <li><a href="../DICHUYEN/thu.html">Di chuyển</a></li>
+        </ul>
+      </nav>
+      <div class="user-actions">
+        <a href="#" class="search-btn"><i class="fas fa-search"></i></a>
+        <a href="../Quyen/dangki.html" class="user-btn"><i class="fas fa-user"></i></a>
+        <a href="../Quyen/giohang.html" class="cart-btn"><i class="fas fa-shopping-cart"></i></a>
+      </div>
+    </div>
+  </header>
 
-          <div class="hotel-card">
-            <img src="../Image/KhachSan/NhaTrang.jpg" alt="Amiana Resort Nha Trang" />
-            <div class="hotel-info">
-              <p class="hotel-sub">5 Sao (Sang trọng) • Nha Trang</p>
-              <h3>Amiana Resort Nha Trang</h3>
-              <p class="hotel-rating">
-                <a><i class="fa-solid fa-star" style="color: #FFD700;"></i></a> 4.6 (458) • Dịch vụ mới
-              </p>
-              <p class="hotel-price">
-                <del>₫4,946,975.5</del><br />
-                <strong>Từ ₫3,892,189.5</strong>
-              </p>
-            </div>
-            <button 
-                class="add-to-cart-btn" 
-                data-name="Amiana Resort Nha Trang" 
-                data-price="3892189"
-                data-image="../Image/KhachSan/NhaTrang.jpg"
-                data-date="20/06/2025"
-                data-description="5 Sao (Sang trọng) • Nha Trang"
-            >Mua</button>
-          </div>
-        
-          <div class="hotel-card">
-            <img src="../Image/KhachSan/5sao_1.jpg" alt="VinOasis Phú Quốc" />
-            <div class="hotel-info">
-              <p class="hotel-sub">5 Sao (Sang trọng) • Phú Quốc</p>
-              <h3>VinOasis Phú Quốc</h3>
-              <p class="hotel-rating">
-                <a><i class="fa-solid fa-star" style="color: #FFD700;"></i></a> 4.1 (297) • Dịch vụ mới
-              </p>
-              <p class="hotel-price">
-                <strong>Từ ₫1,369,851.2</strong>
-              </p>
-            </div>
-            <button 
-                class="add-to-cart-btn" 
-                data-name="VinOasis Phú Quốc" 
-                data-price="1369851"
-                data-image="../Image/KhachSan/5sao_1.jpg"
-                data-date="20/06/2025"
-                data-description="5 Sao (Sang trọng) • Phú Quốc"
-            >Mua</button>
+  <!-- content -->
+  <div class="khachsan">
+    <h1>Khách Sạn</h1>
+    <div class="hotel-grid">
 
-          </div>
-        
-          <div class="hotel-card">
-            <img src="../Image/KhachSan/3sao_1.jpg" alt="Hanami Đà Nẵng" />
-            <div class="hotel-info">
-              <p class="hotel-sub">3 sao (Tiêu chuẩn) • Đà Nẵng</p>
-              <h3>Khách sạn Hanami Đà Nẵng</h3>
-              <p class="hotel-rating">
-                <a><i class="fa-solid fa-star" style="color: #FFD700;"></i></a> 4.1 (40) • Dịch vụ mới
-              </p>
-              <p class="hotel-price">
-                <strong>Từ ₫268,014.38</strong>
-              </p>
-            </div>
-            <button 
-                class="add-to-cart-btn" 
-                data-name="Khách sạn Hanami Đà Nẵng" 
-                data-price="268014"
-                data-image="../Image/KhachSan/3sao_1.jpg"
-                data-date="20/06/2025"
-                data-description="3 Sao (Tiêu chuẩn) • Đà Nẵng"
-            >Mua</button>
-
-          </div>
-        
-          <div class="hotel-card">
-            <img src="../Image/KhachSan/2sao_1.jpg" alt="Giấc Mơ Cát Bà" />
-            <div class="hotel-info">
-              <p class="hotel-sub">2 sao trở xuống (Tiết kiệm) • Cát Bà</p>
-              <h3>Khách sạn Giấc Mơ Cát Bà</h3>
-              <p class="hotel-rating">
-                <a><i class="fa-solid fa-star" style="color: #FFD700;"></i></a> 3.6 (22) • Dịch vụ mới
-              </p>
-              <p class="hotel-price">
-                <strong>Từ ₫415,893.12</strong>
-              </p>
-            </div>
-            <button 
-                class="add-to-cart-btn" 
-                data-name="Khách sạn Giấc Mơ Cát Bà" 
-                data-price="415893"
-                data-image="../Image/KhachSan/2sao_1.jpg"
-                data-date="20/06/2025"
-                data-description="2 Sao trở xuống (Tiết kiệm) • Cát Bà"
-            >Mua</button>
-
-          </div>
-        
-          <div class="hotel-card">
-            <img src="../Image/KhachSan/4-sao-ha-noi.jpg" alt="Hotel de la Coupole Sapa" />
-            <div class="hotel-info">
-              <p class="hotel-sub">5 Sao (Sang trọng) • Sapa</p>
-              <h3>Hotel de la Coupole - MGallery</h3>
-              <p class="hotel-rating">
-                <a><i class="fa-solid fa-star" style="color: #FFD700;"></i></a> 4.8 (530) • Dịch vụ cao cấp
-              </p>
-              <p class="hotel-price">
-                <del>₫5,200,000</del><br />
-                <strong>Từ ₫4,150,000</strong>
-              </p>
-            </div>
-            <button 
-                class="add-to-cart-btn" 
-                data-name="Hotel de la Coupole - MGallery" 
-                data-price="4150000"
-                data-image="../Image/KhachSan/4-sao-ha-noi.jpg"
-                data-date="20/06/2025"
-                data-description="5 Sao (Sang trọng) • Sapa"
-            >Mua</button>
-
-          </div>
-        
-          <div class="hotel-card">
-            <img src="../Image/KhachSan/4sao_2.jpg" alt="Terracotta Hotel Dalat" />
-            <div class="hotel-info">
-              <p class="hotel-sub">4 Sao (Cao cấp) • Đà Lạt</p>
-              <h3>Terracotta Hotel & Resort Dalat</h3>
-              <p class="hotel-rating">
-                <a><i class="fa-solid fa-star" style="color: #FFD700;"></i></a> 4.4 (412) • Gần hồ Tuyền Lâm
-              </p>
-              <p class="hotel-price">
-                <del>₫2,500,000</del><br />
-                <strong>Từ ₫1,850,000</strong>
-              </p>
-            </div>
-            <button 
-                class="add-to-cart-btn" 
-                data-name="Terracotta Hotel & Resort Dalat" 
-                data-price="1850000"
-                data-image="../Image/KhachSan/4sao_2.jpg"
-                data-date="20/06/2025"
-                data-description="4 Sao (Cao cấp) • Đà Lạt"
-            >Mua</button>
-        
-
-          </div>
-        
-          <div class="hotel-card">
-            <img src="../Image/KhachSan/3sao_2.jpg" alt="Mira Bai Xep Hotel" />
-            <div class="hotel-info">
-              <p class="hotel-sub">3 Sao (Tiêu chuẩn) • Quy Nhơn</p>
-              <h3>Mira Bai Xep Hotel</h3>
-              <p class="hotel-rating">
-                <a><i class="fa-solid fa-star" style="color: #FFD700;"></i></a> 4.0 (128) • Gần biển
-              </p>
-              <p class="hotel-price">
-                <strong>Từ ₫790,000</strong>
-              </p>
-            </div>
-            <button 
-                class="add-to-cart-btn" 
-                data-name="Mira Bai Xep Hotel" 
-                data-price="790000"
-                data-image="../Image/KhachSan/3sao_2.jpg"
-                data-date="20/06/2025"
-                data-description="3 Sao (Tiêu chuẩn) • Quy Nhơn"
-            >Mua</button>
-
-          </div>
-        
-          <div class="hotel-card">
-            <img src="../Image/KhachSan/3sao_3.jpg" alt="Khách sạn Lê Lợi" />
-            <div class="hotel-info">
-              <p class="hotel-sub">2 sao trở xuống (Tiết kiệm) • Vũng Tàu</p>
-              <h3>Khách sạn Lê Lợi</h3>
-              <p class="hotel-rating">
-                <a><i class="fa-solid fa-star" style="color: #FFD700;"></i></a> 3.5 (97) • Giá rẻ
-              </p>
-              <p class="hotel-price">
-                <strong>Từ ₫420,000</strong>
-              </p>
-            </div>
-            <button 
-                class="add-to-cart-btn" 
-                data-name="Khách sạn Lê Lợi" 
-                data-price="420000"
-                data-image="../Image/KhachSan/3sao_3.jpg"
-                data-date="20/06/2025"
-                data-description="2 Sao trở xuống (Tiết kiệm) • Vũng Tàu"
-            >Mua</button>
-
-          </div>
-        
+      <div class="hotel-card"
+        onclick="openModal('Amiana Resort Nha Trang', '../Image/KhachSan/NhaTrang.jpg', 'Nha Trang', '₫3,892,189.5', 'Nằm giáp biển, Lucky Sun Hotel Nha Trang Beach cung cấp chỗ nghỉ 4 sao ở Nha Trang, đồng thời có trung tâm thể dục, phòng chờ chung và sân hiên.', 'Các căn tại khách sạn được trang bị điều hòa, khu vực ghế ngồi, TV màn hình phẳng có truyền hình vệ tinh, két an toàn, phòng tắm riêng, đồ vệ sinh cá nhân miễn phí và máy sấy tóc. Tại Lucky Sun Hotel Nha Trang Beach, các phòng đều đi kèm với ga trải giường và khăn tắm.', 'Chỗ nghỉ cách Bãi biển Nha Trang 13 phút đi bộ và Tháp Trầm Hương 1.9 km.')">
+        <img src="../Image/KhachSan/NhaTrang.jpg" alt="Amiana Resort Nha Trang" />
+        <div class="hotel-info">
+          <p class="hotel-sub">5 Sao (Sang trọng) • Nha Trang</p>
+          <h3>Amiana Resort Nha Trang</h3>
+          <p class="hotel-rating">
+            <a><i class="fa-solid fa-star" style="color: #FFD700;"></i></a> 4.6 (458) • Dịch vụ mới
+          </p>
+          <p style="color: rgb(106, 201, 145); font-weight: bold;">Giá đã bao gồm bữa sáng</p>
+          <p class="hotel-price">
+            <del>₫4,946,975.5</del><br />
+            <strong>Từ ₫3,892,189.5</strong>
+          </p>
         </div>
-        
-        
+      </div>
+
+      <div class="hotel-card"
+        onclick="openModal('VinOasis Phú Quốc', '../Image/KhachSan/5sao_1.jpg', 'Phú Quốc', '₫1,369,851.2', 'Khách sạn cách Công viên giải trí Vinpearl Land Phú Quốc 13 km và Corona Casino 14 km.', 'Nằm giáp biển, Osen Hotel Phu Quoc cung cấp chỗ nghỉ 3 sao ở Phú Quốc, đồng thời có xe đạp miễn phí, sân hiên và nhà hàng. ', 'Có quầy bar, chỗ nghỉ nằm cách Bãi Dài 1.7 km. Chỗ nghỉ cung cấp lễ tân 24/24, dịch vụ đưa đón sân bay, dịch vụ phòng và Wi-Fi miễn phí.')">
+        <img src="../Image/KhachSan/5sao_1.jpg" alt="VinOasis Phú Quốc" />
+        <div class="hotel-info">
+          <p class="hotel-sub">5 Sao (Sang trọng) • Phú Quốc</p>
+          <h3>VinOasis Phú Quốc</h3>
+          <p class="hotel-rating">
+            <a><i class="fa-solid fa-star" style="color: #FFD700;"></i></a> 4.1 (297) • Dịch vụ mới
+          </p>
+          <p style="color: rgb(106, 201, 145); font-weight: bold;">Giá đã bao gồm bữa sáng</p>
+          <p class="hotel-price">
+            <del>₫2,946,975.5</del><br />
+            <strong>Từ ₫1,369,851.2</strong>
+          </p>
+        </div>
+      </div>
+
+      <div class="hotel-card"
+        onclick="openModal('Khách sạn Hanami Đà Nẵng', '/assets/image/ks_1.jpg', 'Đà Nẵng', '₫268,014.38', 'AM Memory Central Hotel 2 cách Hồ Xuân Hương 2.6 km. Sân bay Liên Khương cách 32 km, đồng thời chỗ nghỉ có cung cấp dịch vụ đưa đón sân bay mất phí.', 'Tại khách sạn, các phòng được thiết kế có bàn làm việc, TV màn hình phẳng, phòng tắm riêng, ga trải giường và khăn tắm.', 'Mỗi phòng đều được thiết kế có ấm đun nước, trong đó một số phòng có ban công và một số khác thì nhìn ra thành phố. Các căn đều có tủ lạnh.')">
+        <img src="/assets/image/ks_1.jpg" alt="Hanami Đà Nẵng" />
+        <div class="hotel-info">
+          <p class="hotel-sub">3 sao (Tiêu chuẩn) • Đà Nẵng</p>
+          <h3>Khách sạn Hanami Đà Nẵng</h3>
+          <p class="hotel-rating">
+            <a><i class="fa-solid fa-star" style="color: #FFD700;"></i></a> 4.1 (40) • Dịch vụ mới
+          </p>
+          <p style="color: rgb(106, 201, 145); font-weight: bold;">Giá đã bao gồm bữa sáng</p>
+          <p class="hotel-price">
+            <del>₫346,975.5</del><br />
+            <strong>Từ ₫268,014.38</strong>
+          </p>
+        </div>
+      </div>
+
+      <div class="hotel-card"
+        onclick="openModal('Khách sạn Giấc Mơ Cát Bà', '/assets/image/ks_2.jpg', 'Cát Bà', '₫415,893.12', 'Giảm giá Genius tại chỗ nghỉ này tùy thuộc vào ngày đặt phòng, ngày lưu trú và các ưu đãi có sẵn khác.', 'Với sân hiên, quầy bar và nhìn ra thành phố, Cat Ba Xanh Spring Garden Hotel tọa lạc ở Đảo Cát Bà, cách Bãi biển Tùng Thu 13 phút đi bộ.', 'Tại khách sạn, mỗi phòng đều được thiết kế có bàn làm việc. Phòng nào cũng có ấm đun nước, trong đó một số phòng có sân trong và một số khác thì nhìn ra biển. Phòng khách có tủ quần áo.')">
+        <img src="/assets/image/ks_2.jpg" alt="Giấc Mơ Cát Bà" />
+        <div class="hotel-info">
+          <p class="hotel-sub">2 sao trở xuống (Tiết kiệm) • Cát Bà</p>
+          <h3>Khách sạn Giấc Mơ Cát Bà</h3>
+          <p class="hotel-rating">
+            <a><i class="fa-solid fa-star" style="color: #FFD700;"></i></a> 3.6 (22) • Dịch vụ mới
+          </p>
+          <p style="color: rgb(106, 201, 145); font-weight: bold;">Giá đã bao gồm bữa sáng</p>
+          <p class="hotel-price">
+            <del>₫546,975.5</del><br />
+            <strong>Từ ₫415,893.12</strong>
+          </p>
+        </div>
+      </div>
+
+      <div class="hotel-card"
+        onclick="openModal('Hotel de la Coupole - MGallery', '../Image/KhachSan/4-sao-ha-noi.jpg', 'Sapa', '₫4,150,000', 'Nằm ở Sa Pa, cách Trạm cáp treo Fansipan 5.4 km, Hôteldesapa cung cấp chỗ nghỉ có khu vườn, chỗ đậu xe riêng miễn phí, nhà hàng và quầy bar. ', 'Chỗ nghỉ này có các tiện nghi như dịch vụ phòng và quầy lễ tân 24 giờ, cùng với Wi-Fi miễn phí ở toàn bộ chỗ nghỉ. Một số phòng tại chỗ nghỉ có sân hiên với view thành phố.', 'Khách sạn sẽ cung cấp cho khách các phòng có điều hòa, bàn làm việc, ấm đun nước, két an toàn, TV màn hình phẳng và phòng tắm riêng với vòi xịt/chậu rửa vệ sinh. Tại Hôteldesapa, các phòng đều đi kèm với ga trải giường và khăn tắm.')">
+        <img src="../Image/KhachSan/4-sao-ha-noi.jpg" alt="Hotel de la Coupole Sapa" />
+        <div class="hotel-info">
+          <p class="hotel-sub">5 Sao (Sang trọng) • Sapa</p>
+          <h3>Hotel de la Coupole - MGallery</h3>
+          <p class="hotel-rating">
+            <a><i class="fa-solid fa-star" style="color: #FFD700;"></i></a> 4.8 (530) • Dịch vụ cao cấp
+          </p>
+          <p style="color: rgb(106, 201, 145); font-weight: bold;">Giá đã bao gồm bữa sáng</p>
+          <p class="hotel-price">
+            <del>₫5,200,000</del><br />
+            <strong>Từ ₫4,150,000</strong>
+          </p>
+        </div>
+      </div>
+
+      <div class="hotel-card"
+        onclick="openModal('Terracotta Hotel & Resort Dalat', '/assets/image/ks_3.jpg', 'Đà Lạt', '₫1,850,000', 'AM Memory Central Hotel 2 cách Hồ Xuân Hương 2.6 km. Sân bay Liên Khương cách 32 km, đồng thời chỗ nghỉ có cung cấp dịch vụ đưa đón sân bay mất phí.', 'Nằm ở Đà Lạt, AM Memory Central Hotel 2 cung cấp chỗ nghỉ 3 sao có phòng chờ chung và sân hiên. Chỗ nghỉ cách Sân golf Dalat Palace Golf Club khoảng 16 phút đi bộ, Vườn hoa Đà Lạt 1.9 km và Quảng trường Lâm Viên 2.4 km. Chỗ nghỉ này cung cấp dịch vụ phòng, quầy lễ tân 24 giờ và tổ chức các tour du lịch cho khách.', 'Tại khách sạn, các phòng được thiết kế có bàn làm việc, TV màn hình phẳng, phòng tắm riêng, ga trải giường và khăn tắm. Mỗi phòng đều được thiết kế có ấm đun nước, trong đó một số phòng có ban công và một số khác thì nhìn ra thành phố. Các căn đều có tủ lạnh.')">
+        <img src="/assets/image/ks_3.jpg" alt="Terracotta Hotel Dalat" />
+        <div class="hotel-info">
+          <p class="hotel-sub">4 Sao (Cao cấp) • Đà Lạt</p>
+          <h3>Terracotta Hotel & Resort Dalat</h3>
+          <p class="hotel-rating">
+            <a><i class="fa-solid fa-star" style="color: #FFD700;"></i></a> 4.4 (412) • Gần hồ Tuyền Lâm
+          </p>
+          <p style="color: rgb(106, 201, 145); font-weight: bold;">Giá đã bao gồm bữa sáng</p>
+          <p class="hotel-price">
+            <del>₫2,500,000</del><br />
+            <strong>Từ ₫1,850,000</strong>
+          </p>
+        </div>
+      </div>
+
+      <div class="hotel-card"
+        onclick="openModal('Mira Bai Xep Hotel', '/assets/image/ks_4.jpg', 'Quy Nhơn', '₫790,000', 'Nhìn ra thành phố, TMS Quy Nhơn View Biển ở Quy Nhơn cung cấp chỗ nghỉ có khu vực bãi biển riêng, phòng chờ chung, sân hiên, nhà hàng và quầy bar. Wi-Fi miễn phí được cung cấp', 'TMS Quy Nhơn View Biển cách Bãi biển Quy Nhơn 2 phút đi bộ và Bãi Rạng 2.2 km. Chỗ nghỉ cách Sân bay Phù Cát 33 km và cung cấp dịch vụ đưa đón sân bay mất phí.', 'Căn hộ có ban công nơi khách có thể nhìn ra biển, khu vực ghế ngồi, TV màn hình phẳng, bếp đầy đủ tiện nghi gồm tủ lạnh và bếp, cùng phòng tắm riêng được trang bị vòi xịt/chậu rửa vệ sinh và đồ vệ sinh cá nhân miễn phí. Tất cả các căn đều được thiết kế có sân trong nhìn ra núi.')">
+        <img src="/assets/image/ks_4.jpg" alt="Mira Bai Xep Hotel" />
+        <div class="hotel-info">
+          <p class="hotel-sub">3 Sao (Tiêu chuẩn) • Quy Nhơn</p>
+          <h3>Mira Bai Xep Hotel</h3>
+          <p class="hotel-rating">
+            <a><i class="fa-solid fa-star" style="color: #FFD700;"></i></a> 4.0 (128) • Gần biển
+          </p>
+          <p style="color: rgb(106, 201, 145); font-weight: bold;">Giá đã bao gồm bữa sáng</p>
+          <p class="hotel-price">
+            <del>₫946,975.5</del><br />
+            <strong>Từ ₫790,000</strong>
+          </p>
+        </div>
+      </div>
+
+      <div class="hotel-card"
+        onclick="openModal('Khách sạn Lê Lợi', '/assets/image/ks_5.jpg', 'Vũng Tàu', '₫420,000', 'Cách Tượng Chúa Ki-tô 3.3 km, The Sóng Apartment Number 1 Vung Tau - Căn Hộ Biển Số 1 Vũng Tàu có hồ bơi ngoài trời, khu vườn, điều hòa, sân hiên và Wi-Fi miễn phí. Chỗ đậu xe riêng có sẵn trong khuôn viên.', 'Mỗi căn được thiết kế gồm bếp đầy đủ tiện nghi với bàn ăn, TV màn hình phẳng có truyền hình vệ tinh, cùng phòng tắm riêng có vòi xịt/chậu rửa vệ sinh, đồ vệ sinh cá nhân miễn phí và máy sấy tóc. Một số căn có ban công và/hoặc sân trong nhìn ra thành phố.', 'Chỗ nghỉ cách Bạch Dinh 4.1 km và Mũi Nghinh Phong 4.3 km. Chỗ nghỉ cách Sân bay Quốc tế Tân Sơn Nhất 101 km và cung cấp dịch vụ đưa đón sân bay mất phí.')">
+        <img src="/assets/image/ks_5.jpg" alt="Khách sạn Lê Lợi" />
+        <div class="hotel-info">
+          <p class="hotel-sub">2 sao trở xuống (Tiết kiệm) • Vũng Tàu</p>
+          <h3>Khách sạn Lê Lợi</h3>
+          <p class="hotel-rating">
+            <a><i class="fa-solid fa-star" style="color: #FFD700;"></i></a> 3.5 (97) • Giá rẻ
+          </p>
+          <p style="color: rgb(106, 201, 145); font-weight: bold;">Giá đã bao gồm bữa sáng</p>
+          <p class="hotel-price">
+            <del>₫346,975.5</del><br />
+            <strong>Từ ₫420,000</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHẦN 2: Footer -->
+  <footer>
+    <div class="partners">
+      <h3>ĐỐI TÁC</h3>
+      <div class="partner-logos">
+        <img src="../assets/image/shangrila.png" alt="Shangri-La">
+        <img src="../assets/image/asiamiles.png" alt="Asia Miles">
+        <img src="../assets/image/getgo.png" alt="Getgo">
+        <img src="../assets/image/google.png" alt="Reserve with Google">
+        <img src="../assets/image/iventure.jpg" alt="iVenture Card">
+      </div>
     </div>
 
+    <div class="footer-links">
+      <div>
+        <h4>VỀ VIVUGO</h4>
+        <ul>
+          <li><a href="#">Về chúng tôi</a></li>
+          <li><a href="#">Cơ hội nghề nghiệp</a></li>
+          <li><a href="#">Phiếu quà tặng Vivugo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>ĐỐI TÁC</h4>
+        <ul>
+          <li><a href="#">Đăng ký nhà cung cấp</a></li>
+          <li><a href="#">Đối tác đăng nhập</a></li>
+          <li><a href="#">Đối tác liên kết</a></li>
+          <li><a href="#">Chương trình cho người nổi tiếng</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>ĐIỀU KHOẢN SỬ DỤNG</h4>
+        <ul>
+          <li><a href="#">Điều khoản sử dụng</a></li>
+          <li><a href="#">Chính sách bảo mật</a></li>
+          <li><a href="#">Chính sách Cookie</a></li>
+        </ul>
+      </div>
+    </div>
 
-      
-<!-- PHẦN 2: Footer -->
-    <footer>
-        <div class="partners">
-            <h3>ĐỐI TÁC</h3>
-            <div class="partner-logos">
-                <img src="../assets/image/shangrila.png" alt="Shangri-La">
-                <img src="../assets/image/asiamiles.png" alt="Asia Miles">
-                <img src="../assets/image/getgo.png" alt="Getgo">
-                <img src="../assets/image/google.png" alt="Reserve with Google">
-                <img src="../assets/image/iventure.jpg" alt="iVenture Card">
-            </div>
-        </div>
-    
-        <div class="footer-links">
-            <div>
-                <h4>VỀ VIVUGO</h4>
-                <ul>
-                    <li><a href="#">Về chúng tôi</a></li>
-                    <li><a href="#">Cơ hội nghề nghiệp</a></li>
-                    <li><a href="#">Phiếu quà tặng Vivugo</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>ĐỐI TÁC</h4>
-                <ul>
-                    <li><a href="#">Đăng ký nhà cung cấp</a></li>
-                    <li><a href="#">Đối tác đăng nhập</a></li>
-                    <li><a href="#">Đối tác liên kết</a></li>
-                    <li><a href="#">Chương trình cho người nổi tiếng</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>ĐIỀU KHOẢN SỬ DỤNG</h4>
-                <ul>
-                    <li><a href="#">Điều khoản sử dụng</a></li>
-                    <li><a href="#">Chính sách bảo mật</a></li>
-                    <li><a href="#">Chính sách Cookie</a></li>
-                </ul>
-            </div>
-        </div>
-    
-        <div class="copyright">
-            <p>@2023-2027 (K18) Vivugo. TTCSN-NHÓM 13</p>
-        </div>
-    </footer>
+    <div class="copyright">
+      <p>@2023-2027 (K18) Vivugo. TTCSN-NHÓM 13</p>
+    </div>
+  </footer>
 
+  <!-- Modal để hiển thị chi tiết khách sạn -->
+  <div id="hotelDetailModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div class="hotel-header">
+        <img id="hotelImage" src="" alt="Khách sạn" class="hotel-image">
+        <div class="hotel-info">
+          <h2 id="hotelName"></h2>
+          <p class="star-rating">⭐ ⭐ ⭐ ⭐ ⭐</p>
+          <p id="hotelLocation">Địa chỉ: </p>
+          <p id="hotelPrice">Giá từ: </p>
+          <button class="contact-btn">Liên hệ</button>
+          <button id="addToCartButton" class="add-to-cart-btn" data-name="" data-price="" data-image="" data-date=""
+            data-description="">
+            Mua
+          </button>
+        </div>
+      </div>
+      <div class="hotel-description">
+        <h3>Tổng quan</h3>
+        <p id="hotelOverview"></p>
+      </div>
+      <div class="hotel-details">
+        <h3>Chi tiết khách sạn</h3>
+        <p id="hotelDetails"></p>
+      </div>
+      <div class="hotel-amenities">
+        <h3>Tiện nghi</h3>
+        <p id="hotelAmenities"></p>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script src="../index.js"></script>
 
-    <script src="script.js"></script>
-    <script src="../index.js"></script>
-    
 </body>
+
 </html>
