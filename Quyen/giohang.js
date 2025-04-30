@@ -2,15 +2,13 @@ document.addEventListener('DOMContentLoaded', function () {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     let cartItemsContainer = document.getElementById('cart-items');
     let subtotalElem = document.getElementById('subtotal');
-    let discountElem = document.getElementById('discount');
     let totalElem = document.getElementById('total');
 
     function updateSummary() {
-        let subtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-        subtotalElem.textContent = `₫ ${subtotal.toLocaleString()}`;
-        totalElem.textContent = `₫ ${subtotal.toLocaleString()}`;
+        let subtotal = cart.reduce((sum, item) => sum + Number(item.price) * item.quantity, 0);
+        subtotalElem.textContent = `₫ ${subtotal.toLocaleString('vi-VN')}`;
+        totalElem.textContent = `₫ ${subtotal.toLocaleString('vi-VN')}`;
     }
-    
 
     function renderCart() {
         cartItemsContainer.innerHTML = "";
@@ -32,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     <p>${item.description}</p>
                 </div>
                 <div class="cart-actions">
-                    <div class="price">₫ ${item.price.toLocaleString()}</div>
+                    <div class="price">₫ ${Number(item.price).toLocaleString('vi-VN')}</div>
                     <div class="quantity-controls">
                         <button class="decrease">-</button>
                         <span>${item.quantity}</span>
@@ -42,20 +40,21 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
             `;
 
-          
+            // Xử lý nút xóa
             itemDiv.querySelector('.remove').addEventListener('click', () => {
                 cart = cart.filter(cartItem => cartItem.name !== item.name);
                 localStorage.setItem('cart', JSON.stringify(cart));
                 renderCart();
             });
 
-            
+            // Xử lý tăng số lượng
             itemDiv.querySelector('.increase').addEventListener('click', () => {
                 item.quantity++;
                 localStorage.setItem('cart', JSON.stringify(cart));
                 renderCart();
             });
 
+            // Xử lý giảm số lượng
             itemDiv.querySelector('.decrease').addEventListener('click', () => {
                 if (item.quantity > 1) {
                     item.quantity--;
