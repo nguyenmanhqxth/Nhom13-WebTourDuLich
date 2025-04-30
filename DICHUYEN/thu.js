@@ -36,6 +36,63 @@ document.addEventListener('DOMContentLoaded', function () {
             alert(`${productName} đã được thêm vào giỏ hàng!`);
         });
     });
+
+//////
+    const modal = document.getElementById("tourModal");
+    const closeBtn = document.querySelector(".close");
+  
+    document.querySelectorAll(".tour-card").forEach(card => {
+      card.addEventListener("click", function (e) {
+        // Nếu click vào nút mua thì không mở modal
+        if (e.target.classList.contains("add-to-cart-btn")) return;
+  
+        const image = card.querySelector("img").src;
+        const info = card.querySelector(".tour-info");
+        const title = info.querySelector(".tour-title").textContent;
+        const price = info.querySelector(".tour-price").textContent;
+        const rating = info.querySelector(".star").innerHTML;
+        const tags = [...info.querySelectorAll(".tag")].map(tag => tag.textContent);
+  
+        document.getElementById("modal-image").src = image;
+        document.getElementById("modal-title").textContent = title;
+        document.getElementById("modal-price").textContent = price;
+        document.getElementById("modal-rating").innerHTML = rating;
+        document.getElementById("modal-quantity").value = 1;
+  
+        const list = document.getElementById("modal-description-list");
+        list.innerHTML = "";
+        tags.forEach(tag => {
+          const li = document.createElement("li");
+          li.textContent = tag;
+          list.appendChild(li);
+        });
+  
+        modal.style.display = "block";
+
+        const list2 = document.getElementById("modal-description-list");
+        list.innerHTML = "";
+        tags.forEach(tag => {
+            const li = document.createElement("li");
+            li.textContent = tag;
+            list.appendChild(li);
+        });
+      });
+    });
+  
+    closeBtn.onclick = () => (modal.style.display = "none");
+    window.onclick = (e) => {
+      if (e.target == modal) modal.style.display = "none";
+    };
+  
+    document.getElementById("add-to-cart-modal").addEventListener("click", () => {
+      alert("Đã thêm vào giỏ hàng!");
+    });
+  
+    document.getElementById("book-now-modal").addEventListener("click", () => {
+      alert("Chuyển đến trang đặt hàng!");
+    });
+
+
 });
 
 console.log("Image path:", productImage);
