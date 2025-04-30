@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Điền thông tin vào modal
             document.getElementById('detail-name').textContent = data.dataset.name;
-            document.getElementById('detail-price').textContent = data.dataset.price;
+            document.getElementById('detail-price').textContent = parseInt(data.dataset.price).toLocaleString('vi-VN');
             document.getElementById('detail-image').src = data.dataset.image;
 
             const descriptionList = data.dataset.description.split('||');
