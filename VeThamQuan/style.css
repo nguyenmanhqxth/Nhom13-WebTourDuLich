@@ -73,70 +73,28 @@ body {
 /* Nội dung */
 .vethamquan {
   margin-top: 60px;
-  padding: 30px;
   margin-bottom: 50px;
 }
-
-.vethamquan h1 {
-  font-size: 33px;
-  text-align: center;
-  font-weight: 700;
-  color: #3498db;
-  position: relative;
-  margin-bottom: 40px;
-}
-
-.vethamquan h1::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -10px;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 4px;
-  background: linear-gradient(to right, #3498db, #6dd5fa);
-  border-radius: 2px;
-}
-
 
 
 /* Video nền */
 .viet-nam-card {
   position: relative;
-  width: 100vw;
-  height: 550px;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  width: 100%;
+  max-width: 100%;
+  height: 450px; 
   overflow: hidden;
+  margin-bottom: 40px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  margin-bottom:40px;
 }
+
+
 
 .bg-video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-
-.overlay-text {
-  position: absolute;
-  bottom: 20px;
-  left: 30px;
-  color: white;
-  z-index: 2;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
-}
-
-.overlay-text h3 {
-  font-size: 32px;
-}
-
-.overlay-text p {
-  font-size: 20px;
-  margin-top: 8px;
+  display: block;
 }
 
 .ve-grid {
@@ -381,3 +339,23 @@ footer .copyright {
   font-weight: bold;
 }
 
+.center-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+}
+
+.center-title h1 {
+  font-size: 41px;
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.center-title p {
+  font-size: 23px;
+  color: white;
+  margin-top: 10px;
+}
