@@ -2,22 +2,32 @@ document.addEventListener('DOMContentLoaded', function () {
     const modal = document.getElementById('tour-modal');
     const closeBtn = document.querySelector('.close-modal');
 
-    // Thêm sự kiện click cho mỗi thẻ tour-card
+    // Mở modal khi bấm vào tour
     document.querySelectorAll('.tour-card').forEach(card => {
         card.addEventListener('click', function (e) {
-            e.preventDefault(); // Ngăn chặn hành động mặc định của thẻ <a>
+            e.preventDefault();
+
             const data = card.querySelector('.tour-data');
 
-            // Điền thông tin vào modal
-            document.getElementById('detail-name').textContent = data.dataset.name;
-            document.getElementById('detail-price').textContent = parseInt(data.dataset.price).toLocaleString('vi-VN');
-            document.getElementById('detail-image').src = data.dataset.image;
-
+            // Lấy thông tin
+            const name = data.dataset.name;
+            const price = parseInt(data.dataset.price);
+            const image = data.dataset.image;
             const descriptionList = data.dataset.description.split('||');
+
+            // Gán thông tin vào modal
+            document.getElementById('detail-name').textContent = name;
+            document.getElementById('detail-price').textContent = price.toLocaleString('vi-VN');
+            document.getElementById('detail-price').setAttribute('data-value', price); // lưu giá trị gốc
+            document.getElementById('detail-image').src = image;
+
             const formattedDescription = descriptionList.map(item => `<li>${item.trim()}</li>`).join('');
             document.getElementById('detail-description').innerHTML = `<ul>${formattedDescription}</ul>`;
 
-            // Hiển thị modal
+            // Reset số lượng
+            document.getElementById('quantity').value = 1;
+
+            // Hiện modal
             modal.style.display = 'block';
             document.body.style.overflow = 'hidden';
         });
@@ -29,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.style.overflow = 'auto';
     });
 
-    // Đóng modal khi click bên ngoài
+    // Click ra ngoài modal để đóng
     window.addEventListener('click', function (e) {
         if (e.target === modal) {
             modal.style.display = 'none';
@@ -37,12 +47,42 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Xử lý nút Thêm vào giỏ hàng
+    // Thêm vào giỏ hàng
     document.getElementById('add-to-cart').addEventListener('click', function () {
-        alert('Tour đã được thêm vào giỏ hàng!');
+        const name = document.getElementById('detail-name').textContent.trim();
+        const price = parseInt(document.getElementById('detail-price').getAttribute('data-value')); // giá gốc
+        const image = document.getElementById('detail-image').src;
+        const descriptionHTML = document.getElementById('detail-description').innerHTML;
+        const quantity = parseInt(document.getElementById('quantity').value);
+        const date = new Date().toLocaleDateString('vi-VN');
+
+        // Chuyển mô tả từ <li> sang chuỗi
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = descriptionHTML;
+        const items = Array.from(tempDiv.querySelectorAll('li')).map(li => li.textContent);
+        const description = items.join('||');
+
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        const existing = cart.find(item => item.name === name);
+        if (existing) {
+            existing.quantity += quantity;
+        } else {
+            cart.push({
+                name,
+                price,
+                image,
+                description,
+                date,
+                quantity
+            });
+        }
+
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert(`${name} đã được thêm vào giỏ hàng!`);
     });
 
-    // Xử lý nút Đặt ngay
+    // Đặt ngay (giả lập)
     document.getElementById('book-now').addEventListener('click', function () {
         alert('Đặt tour thành công!');
     });
