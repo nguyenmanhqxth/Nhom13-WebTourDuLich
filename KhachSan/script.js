@@ -28,6 +28,9 @@ function openModal(hotelName, hotelImage, hotelLocation, hotelPrice, hotelOvervi
      });
  
      document.getElementById("hotelDetailModal").style.display = "block";
+     document.getElementById('contact-btn').addEventListener('click', function () {
+        alert('Đặt tour thành công!');
+    });
  }
  
  function closeModal() {
