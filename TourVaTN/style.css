@@ -81,6 +81,115 @@ img {
 }
 
 /* content */
+.banner {
+  background: url('../Image/Tour/banner\ tour.jpg') no-repeat center center;
+  background-size: cover;
+  height: 500px;
+  position: relative;
+  color: white;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+  padding: 150px 40px 0 40px;
+  max-width: 75% ;
+  margin: 0 auto;
+}
+
+.banner h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+.voucher-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+.voucher {
+  width: 30%;
+  background-color: #ffeef0;
+  border: 1px solid #f5c2cb;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 150px; /* hoặc chiều cao bạn muốn */
+}
+.voucher p {
+  flex-grow: 1; /* đẩy phần mô tả chiếm khoảng trống còn lại */
+  margin: 10px 0;
+}
+.voucher strong {
+  color: #000;
+}
+.voucher-code {
+  background-color: #f62459;
+  color: white;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+.voucher a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.search-box {
+  background: white;
+  color: black;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.search-box .highlight {
+  color: #d30000;
+  font-weight: bold;
+}
+
+.search-box input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-box button {
+  padding: 10px 20px;
+  background-color: #1d4d89;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-box select {
+  padding: 10px;
+  font-size: 16px;
+}
 .tourvatrainghiem {
   margin-bottom: 50px;
 }
@@ -364,6 +473,49 @@ footer .copyright {
   flex-wrap: wrap;
   margin-top: 40px;
 }
+/* reponsive */
+@media (max-width: 992px) {
+  .voucher {
+    width: 45%;
+  }
+  .banner-content {
+    padding: 120px 20px 0 20px;
+    max-width: 90%;
+  }
+
+  .banner h1 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .voucher {
+    width: 100%;
+  }
+  .banner-content {
+    padding: 100px 15px 0 15px;
+    max-width: 95%;
+    text-align: center;
+  }
+
+  .banner h1 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .search-box {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-box input[type="text"],
+  .search-box select,
+  .search-box button {
+    width: 100%;
+  }
+}
+
 
 
 

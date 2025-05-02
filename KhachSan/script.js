@@ -19,7 +19,7 @@ function openModal(hotelName, hotelImage, hotelLocation, hotelPrice, hotelOvervi
     addToCartButton.setAttribute("data-description", hotelOverview);
 
     document.getElementById("hotelDetailModal").style.display = "block";
-     // Thêm sự kiện click vào backdrop
+
      const modal = document.getElementById("hotelDetailModal");
      modal.addEventListener('click', function(e) {
          if (e.target === this) {
@@ -28,22 +28,22 @@ function openModal(hotelName, hotelImage, hotelLocation, hotelPrice, hotelOvervi
      });
  
      document.getElementById("hotelDetailModal").style.display = "block";
+     document.getElementById('contact-btn').addEventListener('click', function () {
+        alert('Đặt tour thành công!');
+    });
  }
  
  function closeModal() {
      const modal = document.getElementById("hotelDetailModal");
      modal.style.display = "none";
-     // Xóa sự kiện khi đóng modal để tránh memory leak
      modal.removeEventListener('click', closeModal);
  }
 
 
-// Hàm đóng modal
 function closeModal() {
     document.getElementById("hotelDetailModal").style.display = "none";
 }
 
-// Xử lý thêm vào giỏ hàng
 document.addEventListener('DOMContentLoaded', function () {
     const modalAddToCartBtn = document.getElementById('addToCartButton');
     if (modalAddToCartBtn) {
@@ -53,7 +53,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-// Hàm chung để thêm vào giỏ hàng
 function addToCart(button) {
     const productName = button.getAttribute('data-name');
     const productPrice = parseFloat(button.getAttribute('data-price'));
