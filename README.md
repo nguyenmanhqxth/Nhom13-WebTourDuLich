@@ -28,7 +28,7 @@
 ├── VeThamQuan/            # Trang Vé tham quan
 ├── KhachSan/              # Trang Khách sạn
 ├── DICHUYEN/              # Trang Di chuyển
-└── Quyen/                 # Đăng ký, giỏ hàng, đăng nhậpnhập
+└── Quyen/                 # Đăng ký, giỏ hàng, đăng nhập
 ```
 
 ## ⚙️ Cài Đặt & Chạy Website
