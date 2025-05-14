@@ -3,7 +3,7 @@
 
 **ViVuGo** là một website du lịch hiện đại, giao diện thân thiện và nhiều tính năng hữu ích giúp người dùng dễ dàng tìm kiếm và đặt tour, vé tham quan, khách sạn và dịch vụ di chuyển.
 
-![Vivugo Banner](./assets/image/tc_uudai_1.jpg) <!-- Thay bằng ảnh banner phù hợp nếu có -->
+![Vivugo Banner](./assets/image/tc_banner.jpg) <!-- Thay bằng ảnh banner phù hợp nếu có -->
 
 ## ✨ Tính Năng Nổi Bật
 
